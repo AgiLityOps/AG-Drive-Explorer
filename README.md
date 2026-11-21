@@ -124,6 +124,8 @@ This is an unofficial fan project for personal, non-commercial exploration of a 
 connected to ZORG Entertainment. "AG Drive" and all related names, logos and trademarks belong to their respective owners. Please
 respect the game's licence and don't distribute converted game content.
 
+This project was made with the help of [Grok](https://grok.com).
+
 ## Licence
 
 The code in this repository is released under the [MIT License](LICENSE), © 2026 AgiLityOps.
