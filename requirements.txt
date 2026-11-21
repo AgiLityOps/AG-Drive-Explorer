@@ -1,0 +1,6 @@
+numpy>=1.24
+pillow>=10.0
+lz4>=4.0
+texture2ddecoder>=1.0.4
+# optional: drag-and-drop of the .ipa into the window
+tkinterdnd2>=0.4

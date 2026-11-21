@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>AG Drive Track Explorer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script type="importmap">
+{ "imports": {
+  "three": "./vendor/three/build/three.module.min.js",
+  "three/addons/": "./vendor/three/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+<canvas id="c"></canvas>
+
+<div id="panel">
+  <div class="title">AG DRIVE <span>Track Explorer</span></div>
+  <div id="tracklist"></div>
+  <div class="row"><label for="speed">Speed (fly &amp; ride)</label><span id="speedval"></span></div>
+  <input type="range" id="speed" min="0" max="1000" step="1">
+  <div class="row"><label for="exposure">Brightness</label><span id="expval"></span></div>
+  <input type="range" id="exposure" min="25" max="300" step="1" value="100">
+  <div class="row checks">
+    <label><input type="checkbox" id="fogOn" checked> Fog</label>
+    <label><input type="checkbox" id="follow"> Ride racing line</label>
+    <label><input type="checkbox" id="animOn" checked> Animations</label>
+  </div>
+  <div class="row buttons">
+    <button id="resetBtn" title="R">Back to start</button>
+    <button id="helpBtn" title="H">Help</button>
+  </div>
+  <div id="trackinfo"></div>
+</div>
+
+<div id="hud"><span id="hudpos"></span></div>
+<div id="clickhint">Click the 3D view to fly (mouse look). Esc releases the mouse.</div>
+
+<div id="help" class="hidden">
+  <h2>Controls</h2>
+  <table>
+    <tr><td>Click view</td><td>Capture mouse (look around). <b>Esc</b> releases it</td></tr>
+    <tr><td>W A S D / arrows</td><td>Fly forward / left / back / right</td></tr>
+    <tr><td>Space or E</td><td>Up</td></tr>
+    <tr><td>C or Q</td><td>Down</td></tr>
+    <tr><td>Shift (hold)</td><td>Boost x5</td></tr>
+    <tr><td>Mouse wheel</td><td>Change fly speed</td></tr>
+    <tr><td>Drag (without capture)</td><td>Look around</td></tr>
+    <tr><td>R</td><td>Back to the start line</td></tr>
+    <tr><td>F</td><td>Toggle "ride the racing line" (follows the game's racing line with its banking; the speed slider sets the ride speed, Shift boosts, the mouse looks around)</td></tr>
+    <tr><td>V</td><td>While riding: look straight ahead again</td></tr>
+    <tr><td>N</td><td>Toggle animations (flying ships, moving towers, traffic lanes, cycling ad screens)</td></tr>
+    <tr><td>G</td><td>Toggle fog</td></tr>
+    <tr><td>[ and ] or PgUp / PgDn</td><td>Previous / next track</td></tr>
+    <tr><td>1-9, 0, -, =</td><td>Jump straight to track 1-12</td></tr>
+    <tr><td>H</td><td>Show / hide this help</td></tr>
+  </table>
+  <p class="small">Geometry, textures, skyboxes, fog and lighting values are converted from the AG Drive 1.4.5 game files.</p>
+  <button id="helpClose">Close</button>
+</div>
+
+<div id="loading" class="hidden"><div class="box"><div id="loadtext">Loading…</div><div class="bar"><div id="loadbar"></div></div></div></div>
+<div id="error" class="hidden"></div>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

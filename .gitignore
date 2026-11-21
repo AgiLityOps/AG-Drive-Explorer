@@ -1,0 +1,28 @@
+# build output
+/build/
+/dist/
+*.egg-info/
+__pycache__/
+*.pyc
+# native tool (downloaded by build_exe.sh)
+/bin/
+# Wine prefix / installers used by build_exe.sh
+wineprefix/
+wine_dl/
+*.msi
+python-*.exe
+# game material must never be committed
+*.ipa
+Payload/
+*.stg
+*.tex
+*.ipk
+*.aga
+*.asg
+*.luac
+*.lua
+*.mp3
+*.mp4
+*.glb
+*.webp
+AGDrive_Explorer/
